@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: orange;
+  --secondary-color: green;
+  --font-family: "Sora", sans-serif;
+  --logo-weight: 700;
+  --heading-weight: 700;
+  --small-font: clamp(10px, 1vw, 16px);
+  --icon-font: clamp(16px, 2vw, 24px);
+  --header-font: clamp(0.5rem, 1vw, 1.1rem);
+  --gray-background: rgb(237, 237, 237);
+  --content-font: clamp(10px, 1.2vw, 20px);
+
+  --font-bold-title: 600;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+}
+
+body {
+  overflow: hidden;
+}
+hr {
+  background-color: var(--gray-background);
+  margin: 20px 0;
+  opacity: 0.2;
+}
+img {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+ul {
+  list-style: none;
+}
+i {
+  border-radius: 5px;
+  padding: var(--small-font);
+  font-size: var(--icon-font);
+}
+
+.block {
+  display: block !important;
+}
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.gap {
+  gap: 10px;
+}
+#bar-container {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: var(--gray-background);
+}
+
+@media only screen and (min-width: 900px) {
+  #bar-container {
+    display: none;
+  }
+}

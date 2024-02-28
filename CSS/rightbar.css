@@ -1,0 +1,109 @@
+#cart-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  background-color: white;
+  display: none;
+  box-shadow: 3px 0px 10px 1px rgb(172 167 167);
+}
+
+.rightbar-container {
+  margin-top: 10px;
+}
+
+.rightbar-top {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightbar-top button {
+  padding: var(--small-font);
+  background-color: var(--gray-background);
+  border: none;
+  border-radius: 5px;
+}
+.rightbar-top i {
+  background-color: var(--gray-background);
+}
+
+.rightbar-content {
+  height: 81vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightbar-card {
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.rightbar-main {
+  flex: 1;
+}
+.rightbar-main > div:nth-child(odd) {
+  background-color: var(--gray-background);
+}
+.rightbar-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rightbar-card-header i {
+  padding: 0;
+  font-size: var(--small-font);
+}
+.rightbar-footer {
+  padding: 10px 0;
+  background-color: var(--gray-background);
+}
+.rightbar-footer span {
+  font-weight: 700;
+}
+
+.subAmount {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomButtons {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.bottomButtons button {
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.holdButton {
+  background-color: var(--primary-color);
+}
+.proceedButton {
+  background-color: var(--secondary-color);
+}
+@media only screen and (min-width: 900px) {
+  #cart-container {
+    position: relative;
+    width: 100%;
+    transform: translate(0%, 0%);
+    top: 0;
+    left: 0;
+    display: block;
+  }
+}

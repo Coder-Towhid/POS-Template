@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POST SYSTEM</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./CSS/global.css" />
+    <link rel="stylesheet" href="./CSS/topbar.css" />
+    <link rel="stylesheet" href="./CSS/sidebar.css" />
+    <link rel="stylesheet" href="./CSS//main.css " />
+    <link rel="stylesheet" href="./CSS/rightbar.css" />
+  </head>
+  <body>
+    <!-- topbar  -->
+    <div class="topbar">
+      <div class="logo flex-1">
+        <h1>Restro POS</h1>
+      </div>
+      <div class="search flex-3">
+        <div class="search-box">
+          <input
+            class="search-field"
+            type="text"
+            placeholder="Search products..."
+          />
+          <i class="ph ph-magnifying-glass"></i>
+        </div>
+      </div>
+
+      <div class="topbar-right flex-2">
+        <ul>
+          <li><i class="ph ph-arrows-clockwise"></i></li>
+          <li><i class="wifi ph ph-wifi-high"></i></li>
+          <li>
+            <div class="select-table">
+              <i class="ph ph-squares-four"></i>
+              <span>Select Table</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="top-drop-down" class="flex-1">
+        <i onclick="toggle()" class="drop-icon ph ph-caret-down"></i>
+        <div id="drop-down-content" class="top-rightbar">
+          <ul>
+            <li><i class="ph ph-arrows-clockwise"></i></li>
+            <li><i class="wifi ph ph-wifi-high"></i></li>
+            <li>
+              <div class="select-table">
+                <i class="ph ph-squares-four"></i>
+                <span>Select Table</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- sidebar -->
+
+    <aside id="sidebar">
+      <div class="sidebar-icon-wrapper">
+        <ul class="flex-2">
+          <li>
+            <i class="ph ph-house"></i>
+            <span>Home</span>
+          </li>
+          <li>
+            <i class="ph ph-user"></i>
+            <span>Customers</span>
+          </li>
+          <li>
+            <i class="ph ph-squares-four"></i>
+            <span>Tables</span>
+          </li>
+          <li>
+            <i class="ph ph-currency-circle-dollar"></i>
+            <span>Cashier</span>
+          </li>
+          <li>
+            <i class="ph ph-shopping-bag-open"></i>
+            <span>Orders</span>
+          </li>
+          <li>
+            <i class="ph ph-shopping-bag-open"></i>
+            <span>Reports</span>
+          </li>
+          <li>
+            <i class="ph ph-gear"></i>
+            <span>Settings</span>
+          </li>
+        </ul>
+        <div class="sidebar-profile flex-1">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="logout-wrapper">
+            <i class="ph ph-sign-out"></i>
+            <span>Logout</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div id="bar-container">
+      <i id="sidebarHandler" class="ph ph-list" onclick="toggleSidebar()"></i>
+      <i id="rightbarHandler" class="ph ph-list" onclick="openRightbar()"></i>
+    </div>
+
+    <!-- main section -->
+    <main>
+      <div class="main-container">
+        <nav>
+          <ul>
+            <li>
+              <span>Starters</span>
+            </li>
+            <li>
+              <span>Breakfast</span>
+            </li>
+            <li>
+              <span>Lunch</span>
+            </li>
+            <li>
+              <span>Supper</span>
+            </li>
+            <li>
+              <span>Deserts</span>
+            </li>
+            <li>
+              <span>Beverages</span>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fHw%3D"
+                alt=""
+              />
+            </div>
+            <div class="menu-item-title">Thai Style Fried Noodles</div>
+            <div class="menu-item-price">$24.00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- rightbar section -->
+
+      <section id="cart-container">
+        <div class="rightbar-container">
+          <div class="rightbar-top">
+            <div class="rightbar-top-left">
+              <button><strong>+</strong> Add Customer</button>
+            </div>
+            <div class="rightbar-top-right">
+              <i class="ph ph-plus"></i>
+
+              <i class="ph ph-barcode"></i>
+              <i class="ph ph-arrow-clockwise"></i>
+            </div>
+          </div>
+          <hr />
+          <div class="rightbar-content">
+            <div class="rightbar-main">
+              <div class="rightbar-card">
+                <div class="rightbar-card-header">
+                  <div class="d-flex align-center gap">
+                    <i class="ph ph-caret-right"></i>
+                    <p class="quantity">1</p>
+                    <p class="rightbar-card-title">Spicy Shrimp Soup</p>
+                  </div>
+                  <div class="d-flex align-center gap">
+                    <p class="rightbar-card-amount">$40.00</p>
+                    <i class="ph ph-x-circle"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="rightbar-card">
+                <div class="rightbar-card-header">
+                  <div class="d-flex align-center gap">
+                    <i class="ph ph-caret-right"></i>
+                    <p class="quantity">2</p>
+                    <p class="rightbar-card-title">Spicy Shrimp Soup</p>
+                  </div>
+                  <div class="d-flex align-center gap">
+                    <p class="rightbar-card-amount">$40.00</p>
+                    <i class="ph ph-x-circle"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="rightbar-card">
+                <div class="rightbar-card-header">
+                  <div class="d-flex align-center gap">
+                    <i class="ph ph-caret-right"></i>
+                    <p class="quantity">1</p>
+                    <p class="rightbar-card-title">Spicy Shrimp Soup</p>
+                  </div>
+                  <div class="d-flex align-center gap">
+                    <p class="rightbar-card-amount">$40.00</p>
+                    <i class="ph ph-x-circle"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rightbar-footer">
+              <div class="subAmount">
+                <p class="title">Subtotal</p>
+                <p class="amount">$200.00</p>
+              </div>
+              <div class="subAmount">
+                <p class="title">Tax</p>
+                <p class="amount">$45.00</p>
+              </div>
+              <div class="total">
+                <p class="totaltitle">Payable Amount</p>
+                <p class="totalamount">$195.00</p>
+              </div>
+              <div class="bottomButtons">
+                <button class="holdButton">Hold order</button>
+                <button class="proceedButton">Proceed</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./JS/drop-down.js"></script>
+    <script src="./JS/sidebar.js"></script>
+    <script src="./JS/rightbar.js"></script>
+  </body>
+</html>
